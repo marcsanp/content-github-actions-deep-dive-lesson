@@ -45,7 +45,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: us-west-2
       - name: Upload to S3
-        run: aws S3 cp ${{ github.sha }}.zip s3://my-bucket-gh-action-lambda-artifact/${{ github.sha }}.zip
+        run: aws s3 cp ${{ github.sha }}.zip s3://my-bucket-gh-action-lambda-artifact/${{ github.sha }}.zip
         
   
  
