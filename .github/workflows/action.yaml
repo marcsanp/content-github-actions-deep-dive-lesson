@@ -20,7 +20,7 @@ jobs:
             cd function
             pip install flake8
       - name: Lint with flake8
-        uses: |
+        run: |
             # Select identifies which errors should cause the job to fail
             flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
             # The exit zero flag will show errors as warnings and not fail the run
